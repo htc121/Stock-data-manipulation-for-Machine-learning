@@ -1,0 +1,25 @@
+# this program converts stock fundmentsls file to pandas data frame
+
+import xlrd
+import pandas as pd
+
+#select the file with multiple sheets
+file = xlrd.open_workbook('sample_data.xlsx')
+
+# select the sheet by name. 
+sheet = file.sheet_by_name('Data Sheet')
+
+sheet.ncols,sheet.nrows
+
+#create a blank list as placeholder for dataframe.
+df=[]
+
+#mentiion the rows which you want to fetch, here rows from 15 to 30 .(15, 30)
+for rows in range(15,30):
+    df.append(m)
+    m = []
+    for col in range(sheet.ncols):
+        m.append (sheet.cell_value(rows,col))
+    
+df1=pd.DataFrame(df)
+df1
