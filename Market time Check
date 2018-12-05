@@ -1,0 +1,14 @@
+#code to Check if Market is open
+import datetime
+open_time = datetime.time(9, 15, 00, 100000)
+close_time = datetime.time(15, 30, 00, 100000)
+dtnow = datetime.datetime.now()
+tmnow= dtnow.time()
+print(test_time)
+print(open_time)
+print(close_time)
+if dtnow > open_time and dtnow < close_time:
+    print("Trade now")
+else:
+    print("Market Closed")
+    
