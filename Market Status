@@ -1,0 +1,16 @@
+import datetime
+open_time = datetime.time(9, 15, 00, 100000)
+close_time = datetime.time(15, 30, 00, 100000)
+now = datetime.time()
+dtnow = datetime.datetime.now()
+tmnow= dtnow.time()
+print(tmnow)
+print(open_time)
+print(close_time)
+if tmnow > open_time and tmnow < close_time:
+    print("Trade now")
+else:
+    print("Market Closed")
+    
+    # to be done - check for the day
+    # to be done Check from NSE website
