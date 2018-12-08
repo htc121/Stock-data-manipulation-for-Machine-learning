@@ -1,0 +1,27 @@
+# code to check if its working day or holiday
+* get new list of holidays for each year from NSE website
+def working_day():
+    import csv
+    import datetime
+    holiday_list = [['6-Jan-2018'], ['3-Feb-2018'], ['2-Mar-2018'], ['9-Mar-2018'], ['10-Mar-2018'], ['1-May-2018'], ['5-Aug-2018'], ['2-Aug-2018'], ['3-Sep-2018'], ['20-Sep-2018'], ['2-Oct-2018'], ['8-Oct-2018'], ['8-Nov-2018'], ['3-Nov-2018'], ['5-Dec-2018']]
+        
+
+    now = datetime.datetime.now()
+    today = now.strftime("%d-%b-%Y")
+    to_day = datetime.datetime.today().weekday()
+    #print(now)
+    #print(today)
+    #print(to_day)
+
+    if today in holiday_list:
+        return False
+    elif to_day > 4:
+        return False
+    else:
+        return True
+        
+
+if working_day() == True:
+    print('working day')
+else:
+     print('Holiday')
